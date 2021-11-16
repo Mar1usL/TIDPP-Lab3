@@ -69,11 +69,9 @@ pipeline {
             }
         }
 	success {
-		emailext attachLog: true, body: 'Result $BUILD_URL', subject: '$JOB_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS', to: 'testing.jenkins1@gmail.com'
 		echo "${JOB_NAME} - ${BUILD_NUMBER} ran successfully"
 	}
         failure {
-		emailext attachLog: true, body: 'Result $BUILD_URL', subject: '$JOB_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS', to: 'testing.jenkins1@gmail.com'
 		echo "${JOB_NAME} - ${BUILD_NUMBER} failed"
 	}
 	unstable {
