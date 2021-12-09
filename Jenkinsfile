@@ -50,6 +50,15 @@ pipeline {
                 }
             }
         } 
+	stage ('Continuous Delivery'){
+	    echo "Dockerizing the app"
+	    echo "Building the image..."
+	    echo "Pushing image to Docker Hub..."
+	   
+	}
+	stage ('Continuous Deployment'){
+      	    echo "Starting Docker Container..."
+	}
     }
     
     post {
