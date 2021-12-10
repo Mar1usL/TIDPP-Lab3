@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bsIHd5dgJ7MsZbUNKxywGODFJqGi4wEp8t4wn1JyDoe0Cu5P1pTX7IJg8iWvMLV8Nnb4719C4yPofBXsuNf5Ag==",
+  "dgSpecHash": "UeOpO/zuUIWyyhqEGPA9L7t+nFuzSH6J9E875JfcQTRdJsbB99lOqFD1oWRkCAZs5GsrQIWIl+7YQnal+QFsIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\eTickets1\\eTickets\\eTickets.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\eTicketsProject\\eTickets\\eTickets.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\junittestlogger\\1.1.0\\junittestlogger.1.1.0.nupkg.sha512",

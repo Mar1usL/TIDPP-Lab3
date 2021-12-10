@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AgfqTeGjjLY8OjSVu+f5541HywkdtBRcZjawkiZ6BywTsojJ59eg+Xdugx8GdNKtPNlze05wcU2WHLK8LZQORw==",
+  "dgSpecHash": "823kD/St+sF0So2JTC2YtwFT2usMsh2MbeWmlXC8gQcxtBjTxewiO9L78GTegQ/uifwqrrHz2jbZxoSPlEj9Sg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\eTickets1\\UnitTests\\UnitTests.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\eTicketsProject\\UnitTests\\UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\junittestlogger\\1.1.0\\junittestlogger.1.1.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

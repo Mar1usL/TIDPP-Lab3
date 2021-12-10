@@ -7847,11 +7847,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\eTickets1\\eTickets\\eTickets.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\eTicketsProject\\eTickets\\eTickets.csproj",
       "projectName": "eTickets",
-      "projectPath": "C:\\Users\\Admin\\source\\repos\\eTickets1\\eTickets\\eTickets.csproj",
+      "projectPath": "C:\\Users\\Admin\\source\\repos\\eTicketsProject\\eTickets\\eTickets.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\source\\repos\\eTickets1\\eTickets\\obj\\",
+      "outputPath": "C:\\Users\\Admin\\source\\repos\\eTicketsProject\\eTickets\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
