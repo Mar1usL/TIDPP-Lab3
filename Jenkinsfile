@@ -14,7 +14,8 @@ pipeline {
         ON_SUCCESS_SEND_EMAIL = 'true'
         ON_FAILURE_SEND_EMAIL = 'true'
         ACCESS_ID = credentials('mariusId')
-        
+	dockerImage = ''  
+	registry = 'mariuslp234/tidpp-lab4'
     }
     
     stages {
@@ -49,7 +50,19 @@ pipeline {
                     }
                 }
             }
-        } 
+        }
+	stage('Continuous Delivery'){
+	    steps {
+		script {
+		    dockerImage = docker.build registry
+		}
+	    }
+	}
+	stage('Continuous Deployment'){
+	    steps {
+		echo "Continuous Deployment"
+	    }
+	}
     }
     
     post {
