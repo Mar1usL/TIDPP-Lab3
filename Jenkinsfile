@@ -16,6 +16,7 @@ pipeline {
         ACCESS_ID = credentials('mariusId')
 	dockerImage = ''  
 	registry = 'mariuslp234/tidpp-lab4'
+	registryCredential = 'dockerhub_id'
     }
     
     stages {
@@ -54,7 +55,7 @@ pipeline {
 	stage('Continuous Delivery'){
 	    steps {
 		script {
-		    dockerImage = docker.build registry
+		    docker.build registry
 		}
 	    }
 	}
