@@ -55,7 +55,9 @@ pipeline {
 	stage('Continuous Delivery'){
 	    steps {
 		script {
+		dir(' C:\\JenkinsWS\\workspace\\eTicketsProject\\eTickets') {
 		    dockerImage = docker.build registry
+		    }
 		}
 	    }
 	}
