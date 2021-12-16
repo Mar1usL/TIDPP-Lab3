@@ -56,11 +56,17 @@ pipeline {
 	    steps {
 		script {
 		    dockerImage = docker.build registry	 
-			docker.withRegistry('', registryCredential){
-				dockerImage.push()
-			}
 		}
 	    }
+	}
+	stage('Image Uploading'){
+		steps {
+			script {
+				docker.withRegistry( '', registryCredential){
+					dockerImage.push()
+				}
+			}
+		}
 	}
 	stage('Continuous Deployment'){
 	    steps {
@@ -82,7 +88,6 @@ pipeline {
             script {
                 if (params.CLEAN_WORKSPACE == true){
                     cleanWs()
-		    bat "docker rmi $registry"
                 }
             }
         }
