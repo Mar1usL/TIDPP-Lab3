@@ -54,7 +54,7 @@ pipeline {
 	stage('Continuous Delivery'){
 	    steps {
 		script {
-		    dockerImage = docker.build registry 
+		    bat 'docker build -t mariuslp234/tidpp-lab4 '
 		}
 	    }
 	}
