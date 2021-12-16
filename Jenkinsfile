@@ -54,7 +54,7 @@ pipeline {
 	stage('Continuous Delivery'){
 	    steps {
 		script {
-		    dockerImage = docker.build registry
+		    dockerImage = docker.build registry 
 		}
 	    }
 	}
