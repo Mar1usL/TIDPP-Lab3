@@ -55,7 +55,10 @@ pipeline {
 	stage('Continuous Delivery'){
 	    steps {
 		script {
-		    dockerImage = docker.build registry	    
+		    dockerImage = docker.build registry	 
+			docker.withRegistry('', registryCredential){
+				dockerImage.push()
+			}
 		}
 	    }
 	}
@@ -79,6 +82,7 @@ pipeline {
             script {
                 if (params.CLEAN_WORKSPACE == true){
                     cleanWs()
+		    bat "docker rmi $registry"
                 }
             }
         }
