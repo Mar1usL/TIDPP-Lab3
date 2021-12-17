@@ -70,7 +70,7 @@ pipeline {
 	}
 	stage('Continuous Deployment'){
 	    steps {
-		echo "Continuous Deployment"
+		echo "Deploying image to VBox"
 	    }
 	}
     }
