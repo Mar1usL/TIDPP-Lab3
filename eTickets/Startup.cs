@@ -32,7 +32,7 @@ namespace eTickets
             var server = Configuration["DBServer"] ?? "ms-sql-server";
             var port = Configuration["DBPort"] ?? "1433";
             var user = Configuration["DBUser"] ?? "SA";
-            var password = Configuration["DBPassword"] ?? "Pa55w0rd2021!!";
+            var password = Configuration["DBPassword"] ?? "Pa55w0rd2021";
             var database = Configuration["Database"] ?? "eTickets";
  
             //DbContext configuration
