@@ -14,7 +14,9 @@ pipeline {
         ON_SUCCESS_SEND_EMAIL = 'true'
         ON_FAILURE_SEND_EMAIL = 'true'
         ACCESS_ID = credentials('mariusId')
-        
+	dockerImage = ''  
+	registry = 'mariuslp234/tidpp-lab4'
+	registryCredential = 'dockerhub_id'
     }
     
     stages {
@@ -49,7 +51,28 @@ pipeline {
                     }
                 }
             }
-        } 
+        }
+	stage('Continuous Delivery'){
+	    steps {
+		script {
+		    dockerImage = docker.build registry	 
+		}
+	    }
+	}
+	stage('Image Uploading'){
+		steps {
+			script {
+				docker.withRegistry( '', registryCredential){
+					dockerImage.push()
+				}
+			}
+		}
+	}
+	stage('Continuous Deployment'){
+	    steps {
+		echo "Deploying image to VBox"
+	    }
+	}
     }
     
     post {
@@ -62,9 +85,12 @@ pipeline {
             
             junit '**/UnitTests/TestResults/*.xml'
             
+	   
+		
             script {
                 if (params.CLEAN_WORKSPACE == true){
                     cleanWs()
+		     bat "docker rmi $registry"
                 }
             }
         }
