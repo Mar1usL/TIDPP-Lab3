@@ -5,7 +5,7 @@ services:
     environment:
       ACCEPT_EULA: "${ACCEPT}"
       SA_PASSWORD: "${PWD}"
-      MSSQL_PID: "${PID}"
+      MSSQL_PID: ${PID}
     ports:
       - "1433:1433"
   tickets-project:
