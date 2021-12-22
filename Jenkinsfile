@@ -103,7 +103,7 @@ pipeline {
             script {
                 if (params.CLEAN_WORKSPACE == true){
                     cleanWs()
-		     bat "docker rmi $registry"
+		     
                 }
             }
         }
