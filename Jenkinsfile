@@ -68,24 +68,8 @@ pipeline {
 			}
 		}
 	}
-	    
-	stage ('Continuous Deployment'){
-            steps {
-                script {
-                    withCredentials([sshUserPrivateKey(credentialsId: 'vbox-id', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'user')]){
-                        def remote = [:]
-                        remote.name = 'user'
-                        remote.host = '192.168.56.101'
-                        remote.user = 'user'
-                        remote.identityFile = identity
-                        remote.allowAnyHosts = true
-                        
-                        sshCommand remote: remote, command: 'cd ~/tidpp && echo 1234 | sudo -S docker-compose up -d'
-                        
-                    }
-                }
-            }
-        }
+	 // Continuous Deployment Placeholder   
+	
     }
     
     post {
