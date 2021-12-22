@@ -80,7 +80,7 @@ pipeline {
                         remote.identityFile = identity
                         remote.allowAnyHosts = true
                         
-                        sshCommand remote: remote, command: 'echo 1234 | sudo -S docker-compose -f ~/tidpp/docker-compose.yml up -d'
+                        sshCommand remote: remote, command: 'cd ~/tidpp && echo 1234 | sudo -S docker-compose up -d'
                         
                     }
                 }
