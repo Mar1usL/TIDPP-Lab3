@@ -29,16 +29,11 @@ namespace eTickets
         public void ConfigureServices(IServiceCollection services)
         {
             
-            var server = Configuration["DBServer"] ?? "ms-sql-server";
-            var port = Configuration["DBPort"] ?? "1433";
-            var user = Configuration["DBUser"] ?? "SA";
-            var password = Configuration["DBPassword"] ?? "Pa55w0rd2021";
-            var database = Configuration["Database"] ?? "eTickets";
+           
  
-            //DbContext configuration
-            //services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
-            services.AddDbContext<AppDbContext>(options => 
-            options.UseSqlServer($"Server={server},{port};Initial Catalog={database};User ID={user};Password={password}"));
+           
+            /services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+            
             
             //Services configuration
             services.AddScoped<IActorsService, ActorsService>();
